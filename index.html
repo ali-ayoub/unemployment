@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>median_household_income</title>
+    <title>unemployment_rate</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
@@ -90,31 +90,28 @@
 <body>
 
 <div id='map'></div>
-<div class='map-overlay' id='features'><h2>Unemployment Rate</h2><div id='pd'><p>Hover over a zipcode!</p></div></div>
+<div class='map-overlay' id='features'><h2>Unemployment Rate</h2><div id='pd'><p>Hover over an area!</p></div></div>
 <div class='map-overlay' id='legend'></div>
 
 <div id='state-legend' class='legend'>
     <h4>Unemployment Rate</h4>
-    <div><span style='background-color: #08306b'></span>100</div>
-    <div><span style='background-color: #084b94'></span>75</div>
-    <div><span style='background-color: #1563aa'></span>50</div>
-    <div><span style='background-color: #2879b9'></span>25</div>
-    <div><span style='background-color: #3e8ec4'></span>20</div>
-    <div><span style='background-color: #57a0cf'></span>15</div>
-    <div><span style='background-color: #73b3d8'></span>10</div>
+    <div><span style='background-color: #2879b9'></span>17.5</div>
+    <div><span style='background-color: #3e8ec4'></span>15</div>
+    <div><span style='background-color: #57a0cf'></span>10</div>
+    <div><span style='background-color: #73b3d8'></span>7.5</div>
     <div><span style='background-color: #94c5df'></span>5</div>
-    <div><span style='background-color: #b0d2e8'></span>0</div>
+    <div><span style='background-color: #b0d2e8'></span>2.8</div>
 </div>
 
 <div id='zipcode-legend' class='legend' style='display: none;'>
     <h4>Unemployment Rate</h4>
     <div><span style='background-color: #08306b'></span>100</div>
-    <div><span style='background-color: #084b94'></span>75</div>
-    <div><span style='background-color: #1563aa'></span>50</div>
-    <div><span style='background-color: #2879b9'></span>25</div>
-    <div><span style='background-color: #3e8ec4'></span>20</div>
-    <div><span style='background-color: #57a0cf'></span>15</div>
-    <div><span style='background-color: #73b3d8'></span>10</div>
+    <div><span style='background-color: #084b94'></span>20</div>
+    <div><span style='background-color: #1563aa'></span>17.5</div>
+    <div><span style='background-color: #2879b9'></span>15</div>
+    <div><span style='background-color: #3e8ec4'></span>12.5</div>
+    <div><span style='background-color: #57a0cf'></span>10</div>
+    <div><span style='background-color: #73b3d8'></span>7.5/div>
     <div><span style='background-color: #94c5df'></span>5</div>
     <div><span style='background-color: #b0d2e8'></span>0</div>
 </div>
@@ -143,26 +140,6 @@ map.on('load', function() {
 
     // make a pointer cursor
     map.getCanvas().style.cursor = 'default';
-
-    // // define layer names
-    // var layers = ['<h4>Median Household Income(USD)</h4>', '0-2500', '2500-27250', '27250-52000', '52000-76750', '76750-101500', '101500-126250', '126250-151000', '151000-175750', '175750-200500', '200500-225250', '225250-250000'];
-    // var colors = ['', '#f7fbff', '#e2eef9', '#cde0f2', '#b0d2e8', '#89bfdd', '#60a6d2', '#3e8ec4', '#2172b6','#0a549e', '#08306b', '#000000'];
-
-    // // create legend
-    // for (i=0; i<layers.length; i++) {
-    //     var layer = layers[i];
-    //     var color = colors[i];
-    //     var item = document.createElement('div');
-    //     var key = document.createElement('span');
-    //     key.className = 'legend-key';
-    //     key.style.backgroundColor = color;
-
-    //     var value = document.createElement('span');
-    //     value.innerHTML = layer;
-    //     item.appendChild(key);
-    //     item.appendChild(value);
-    //     legend.appendChild(item);
-    // }
 
     // change info window on hover
     map.on('mousemove', function (e) {
